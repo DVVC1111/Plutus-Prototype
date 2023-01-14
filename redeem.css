@@ -11,6 +11,13 @@ body{
 	border: 0;
 }
 
+#redeem-body h1{
+    color: rgb(0, 0, 0);
+	font-weight: 300;
+	
+	text-align: center;
+}
+
 
 /* navigation  */
 a{
@@ -122,187 +129,90 @@ a{
 
 
 /* body */
-.prize-container {
-    position: relative;
-}
-
-.prize-container .prize-card {
-    position: relative;
-    width: 25%;
-    height: 1000px;
-    background: #232323;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.prize-container .prize-card:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1BBFE9;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-
-.prize-container .prize-card:hover:before {
-    clip-path: circle(300px at 80% -20%);
-}
-
-.prize-container .prize-card:after {
-    content: "Nike";
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.04);
-
-}
-
-.prize-container .prize-card .imgBx {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    transition: .5s;
-}
-
-.prize-container .prize-card:hover .imgBx {
-    top: 0%;
-    transform: translateY(-25%);
-    /* bug  */
-}
-
-.prize-container .prize-card .imgBx img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(20deg);
-    width: 270px;
-}
-
-.prize-container .prize-card .contentBx {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 90;
-}
-
-.prize-container .prize-card:hover .contentBx {
-    height: 210px;
-}
-
-.prize-container .prize-card .contentBx h2 {
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #fff;
-}
-
-.prize-container .prize-card .contentBx .size,
-.prize-container .prize-card .contentBx .color {
+#prize-container {  
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px;
-    transition: .5s;
-    opacity: 0;
-    visibility: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 
-.prize-container .prize-card:hover .contentBx .size {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: .5s;
+.prize-card{
+    border-style: solid;
+    margin: 2% 5%;
+    padding: 0;
+    border-color: #2A265F;
+    border-radius: 30px;
+
 }
 
-.prize-container .prize-card:hover .contentBx .color {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: .6s;
+.prize-card img{
+    max-width: 100%;
+    border-radius: 30px 30px 0 0;
+    
+    
+    
 }
 
-.prize-container .prize-card .contentBx .size h3,
-.prize-container .prize-card .contentBx .color h3 {
-    color: white;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
-}
-
-.prize-container .prize-card .contentBx .size span {
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111;
-    background: #fff;
-    margin: 0 5px;
-    transition: .5s;
-    color: #111;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.prize-container .prize-card .contentBx .size span:hover {  /* other bug */
-    background: #B90000;
-}
-
-.prize-container .prize-card .contentBx .color span {
+.prize-coin{
     width: 20px;
-    height: 20px;
-    background: #ff0;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+    float: right;
+    padding: 0;
+    padding-top: 13%;
 }
 
-.prize-container .prize-card .contentBx .color span:nth-child(2) {
-     background: #1BBFE9;
+.prize-amount{
+    float: left;
+}
+.prize-cost {
+    margin-left: 30%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+
+    border-radius: 30px;
+    padding: 0 3%;
+    width: 35%;
+    height: 8%;
+
+    
 }
 
-.prize-container .prize-card .contentBx .color span:nth-child(3) {
-     background: #1B2FE9;
+.prize-img{
+    background-color: #67639b;
+    height: 10%;
+    width: 100%;
+    
 }
 
-.prize-container .prize-card .contentBx .color span:nth-child(4) {
-     background: #080481;
+
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	
+	bottom: 30px;
+
+	letter-spacing: 1px;
+    margin: 3% 36%;
 }
 
-.prize-container .prize-card .contentBx a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #fff;
-    border-radius: 4px;
-    margin-top: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: .5s;
+.prize-detail, .prize-cost{
+    
+    text-align: center;
+    justify-content: center;
+    
 }
 
-.prize-container .prize-card:hover .contentBx a {
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: .7s;
-} 
 
-/* body end */
+
+
+
+ /* body end */
 
 
 
